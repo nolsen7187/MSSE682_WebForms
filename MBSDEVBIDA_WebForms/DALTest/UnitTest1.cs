@@ -21,12 +21,23 @@ namespace DALTest
             CIJ.DATAAREAID = "MBS";
             CIJRepo.Create(CIJ);*/
 
-            MBSDEVBIDAEntities data = new MBSDEVBIDAEntities();
-            CUSTINVOICEJOUR CIJ = new CUSTINVOICEJOUR();
-            CIJ.DATAAREAID = "MBS";
+            AXMbsDevEntities data = new AXMbsDevEntities();
+            DATAAREA DA = new DATAAREA();
+            DA.ID = "Rr";
+            DA.NAME = "Sucks Balls";
+            //DA.RECID = 1;
 
-            data.CUSTINVOICEJOURs.Add(CIJ);
+            data.DATAAREAs.Add(DA);
             data.SaveChanges();
+        }
+        [TestMethod]
+        public void TestRepositoryWrite()
+        {
+            var DARepo = new DataRepository<DATAAREA>();
+            DATAAREA DA = new DATAAREA();
+            DA.ID = "aR";
+            DA.NAME = "Sucks Balls";
+            DARepo.Create(DA);
         }
     }
 }

@@ -51,69 +51,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AXMbsDevModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AXMbsDevModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AXMbsDevModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AXMbsDevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AXMbsDevModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AXMbsDevModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="CUSTINVOICEJOUR.cs">
-      <DependentUpon>MBSDEV.tt</DependentUpon>
+      <DependentUpon>AXMbsDevModel.tt</DependentUpon>
     </Compile>
     <Compile Include="CUSTINVOICETRAN.cs">
-      <DependentUpon>MBSDEV.tt</DependentUpon>
+      <DependentUpon>AXMbsDevModel.tt</DependentUpon>
     </Compile>
     <Compile Include="CUSTTABLE.cs">
-      <DependentUpon>MBSDEV.tt</DependentUpon>
+      <DependentUpon>AXMbsDevModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DATAAREA.cs">
-      <DependentUpon>MBSDEV.tt</DependentUpon>
+      <DependentUpon>AXMbsDevModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MBSBDSALESREPTABLE.cs">
-      <DependentUpon>MBSDEV.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MBSDEV.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MBSDEV.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MBSDEV.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MBSDEV.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MBSDEV.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MBSDEV.edmx</DependentUpon>
+      <DependentUpon>AXMbsDevModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MBSWBWEBUSERCONTACT.cs">
-      <DependentUpon>MBSDEV.tt</DependentUpon>
+      <DependentUpon>AXMbsDevModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryClass.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="MBSDEV.edmx">
+    <EntityDeploy Include="AXMbsDevModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MBSDEV.Designer.cs</LastGenOutput>
+      <LastGenOutput>AXMbsDevModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="App.config" />
-    <None Include="MBSDEV.Context.tt">
+    <None Include="App.Config" />
+    <None Include="AXMbsDevModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MBSDEV.edmx</DependentUpon>
-      <LastGenOutput>MBSDEV.Context.cs</LastGenOutput>
+      <DependentUpon>AXMbsDevModel.edmx</DependentUpon>
+      <LastGenOutput>AXMbsDevModel.Context.cs</LastGenOutput>
     </None>
-    <None Include="MBSDEV.edmx.diagram">
-      <DependentUpon>MBSDEV.edmx</DependentUpon>
+    <None Include="AXMbsDevModel.edmx.diagram">
+      <DependentUpon>AXMbsDevModel.edmx</DependentUpon>
     </None>
-    <None Include="MBSDEV.tt">
+    <None Include="AXMbsDevModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MBSDEV.edmx</DependentUpon>
-      <LastGenOutput>MBSDEV.cs</LastGenOutput>
+      <DependentUpon>AXMbsDevModel.edmx</DependentUpon>
+      <LastGenOutput>AXMbsDevModel.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="MBSDEV.edmx.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

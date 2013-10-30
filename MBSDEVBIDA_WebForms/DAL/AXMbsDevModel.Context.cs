@@ -13,10 +13,10 @@ namespace DAL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MBSDEVBIDAEntities : DbContext
+    public partial class AXMbsDevEntities : DbContext
     {
-        public MBSDEVBIDAEntities()
-            : base("name=MBSDEVBIDAEntities")
+        public AXMbsDevEntities()
+            : base("name=AXMbsDevEntities")
         {
         }
     
