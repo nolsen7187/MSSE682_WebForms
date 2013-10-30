@@ -89,11 +89,11 @@
     <Compile Include="RepositoryClass.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <EntityDeploy Include="MBSDEV.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>MBSDEV.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="App.config" />
     <None Include="MBSDEV.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MBSDEV.edmx</DependentUpon>

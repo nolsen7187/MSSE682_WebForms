@@ -5,10 +5,12 @@
 -- Date Created: 10/30/2013 14:06:05
 -- Generated from EDMX file: C:\Users\nolsen\Source\Repos\MBSDEVBIDA_WebForms\DAL\MBSDEV.edmx
 -- --------------------------------------------------
+IF NOT EXISTS(select * from sys.databases where name = 'MBSDEV')
+	CREATE DATABASE MBSDEV;
 
 SET QUOTED_IDENTIFIER OFF;
 GO
-USE [MBSDEVBIDA];
+USE [MBSDEV];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
