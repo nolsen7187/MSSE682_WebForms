@@ -53,7 +53,7 @@
     <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="80" Unicode="true" FixedLength="false" />
     <Property Name="CITY" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
     <Property Name="STREET" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
-    <Property Name="MBSDEPARTMENTCODE" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="MBSDEPARTMENTCODE" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
     <Property Name="DATAAREAID" Type="String" Nullable="false" MaxLength="4" Unicode="true" FixedLength="false" />
     <Property Name="RECID" Type="Int64" Nullable="false" />
   </EntityType>
@@ -81,13 +81,13 @@
       <PropertyRef Name="CONTACTPERSONID" />
       <PropertyRef Name="DATAAREAID" />
     </Key>
-    <Property Name="ACCOUNTNUM" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="ACCOUNTNUM" Type="String" MaxLength="20" Unicode="true" FixedLength="false" Nullable="true" />
     <Property Name="NAME" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
     <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="80" Unicode="true" FixedLength="false" />
     <Property Name="WEBLOGON" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
     <Property Name="WEBPASSWORD" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
     <Property Name="CONTACTPERSONID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-    <Property Name="SALESREPID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="SALESREPID" Type="String" Nullable="true" MaxLength="10" Unicode="true" FixedLength="false" />
     <Property Name="DATAAREAID" Type="String" Nullable="false" MaxLength="4" Unicode="true" FixedLength="false" />
     <Property Name="RECID" Type="Int64" Nullable="false" />
   </EntityType>
