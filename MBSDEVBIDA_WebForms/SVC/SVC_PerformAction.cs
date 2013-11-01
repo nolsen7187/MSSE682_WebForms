@@ -13,48 +13,30 @@ namespace SVC
 {
     public class SVC_PerformAction
     {
-        private static Int16 actionType;
-        private Type ClassType;
-
         //Method used for websites
         public void Action(Object Class, int ActionType)
         {
             dynamic ClassObject = Class;
             string ClassType = Class.ToString();
 
-            if (ClassType == "DAL.Customer")
+            if (ClassType == "DAL.MBSWBWEBUSERCONTACT")
             {
-                var Repo = SVC_RepositoryConcreteClass.CRUD<Customer>();
+                var Repo = SVC_RepositoryConcreteClass.CRUD<MBSWBWEBUSERCONTACT>();
                 Act(Repo, ClassObject, ActionType);
             }
-            else if (ClassType == "DAL.Employee")
+            else if (ClassType == "DAL.CUSTTABLE")
             {
-                var Repo = SVC_RepositoryConcreteClass.CRUD<Employee>();
+                var Repo = SVC_RepositoryConcreteClass.CRUD<CUSTTABLE>();
                 Act(Repo, ClassObject, ActionType);
             }
-            else if (ClassType == "DAL.Item")
+            else if (ClassType == "DAL.MBSBDSALESREPTABLE")
             {
-                var Repo = SVC_RepositoryConcreteClass.CRUD<Item>();
+                var Repo = SVC_RepositoryConcreteClass.CRUD<MBSBDSALESREPTABLE>();
                 Act(Repo, ClassObject, ActionType);
             }
-            else if (ClassType == "DAL.ItemCategory")
+            else if (ClassType == "DAL.DATAAREA")
             {
-                var Repo = SVC_RepositoryConcreteClass.CRUD<ItemCategory>();
-                Act(Repo, ClassObject, ActionType);
-            }
-            else if (ClassType == "DAL.SalesHeader")
-            {
-                var Repo = SVC_RepositoryConcreteClass.CRUD<SalesHeader>();
-                Act(Repo, ClassObject, ActionType);
-            }
-            else if (ClassType == "DAL.SalesItem")
-            {
-                var Repo = SVC_RepositoryConcreteClass.CRUD<SalesItem>();
-                Act(Repo, ClassObject, ActionType);
-            }
-            else if (ClassType == "DAL.WebUserTable")
-            {
-                var Repo = SVC_RepositoryConcreteClass.CRUD<WebUserTable>();
+                var Repo = SVC_RepositoryConcreteClass.CRUD<DATAAREA>();
                 Act(Repo, ClassObject, ActionType);
             }
         }

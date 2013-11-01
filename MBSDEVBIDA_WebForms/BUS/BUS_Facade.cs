@@ -9,16 +9,18 @@ namespace BUS
 {
     public class BUS_Facade
     {
+        private SVC_PerformAction svcPerformAction = new SVC_PerformAction();
         private Object lclObjectClass;
+        private int lclActionType;
 
-        public Facade(Object Object, int ActionType)
+        public BUS_Facade(Object Object, int ActionType)
         {   
             this.lclObjectClass = Object;
             this.lclActionType = ActionType;
         }
         public void ProcessRequest()
         {
-            performAction.Action(lclObjectClass, lclActionType);
+            svcPerformAction.Action(lclObjectClass, lclActionType);
         }
     }
 }

@@ -16,18 +16,13 @@ namespace DALTest
         [TestMethod]
         public void TestWriteToDataAreaTable()
         {
-            /*ar CIJRepo = new DataRepository<CUSTINVOICEJOUR>();
-            CUSTINVOICEJOUR CIJ = new CUSTINVOICEJOUR();
-            CIJ.DATAAREAID = "MBS";
-            CIJRepo.Create(CIJ);*/
-
             AXMbsDevEntities data = new AXMbsDevEntities();
             DATAAREA DA = new DATAAREA();
-            DA.ID = "Rr";
-            DA.NAME = "Sucks Balls";
+            DA.ID = "COP";
+            DA.NAME = "Cardinal Office Products";
             //DA.RECID = 1;
 
-            data.DATAAREAs.Add(DA);
+            data.DATAAREA.Add(DA);
             data.SaveChanges();
         }
         [TestMethod]

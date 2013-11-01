@@ -9,7 +9,7 @@ namespace DAL
     {
         protected override void Seed(AXMbsDevEntities context)
         {
-            GetWebUsers().ForEach(m => context.MBSWBWEBUSERCONTACTs.Add(m));
+            GetWebUsers().ForEach(m => context.MBSWBWEBUSERCONTACT.Add(m));
             //GetCustomers().ForEach(c => context.Customers.Add(c));
             /*GetEmployees().ForEach(e => context.Employees.Add(e));
             GetItems().ForEach(i => context.Items.Add(i));
