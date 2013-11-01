@@ -12,7 +12,7 @@ namespace DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class CUSTINVOICETRAN
+    public partial class CUSTINVOICETRANS
     {
         public string INVOICEID { get; set; }
         public System.DateTime INVOICEDATE { get; set; }

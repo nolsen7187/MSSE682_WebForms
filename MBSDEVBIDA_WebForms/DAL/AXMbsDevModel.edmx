@@ -6,14 +6,14 @@
     <edmx:StorageModels>
     <Schema Namespace="AXMbsDevModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="AXMbsDevModelStoreContainer">
-          <EntitySet Name="CUSTINVOICEJOURs" EntityType="AXMbsDevModel.Store.CUSTINVOICEJOURs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CUSTINVOICEJOUR" EntityType="AXMbsDevModel.Store.CUSTINVOICEJOUR" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="CUSTINVOICETRANS" EntityType="AXMbsDevModel.Store.CUSTINVOICETRANS" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CUSTTABLEs" EntityType="AXMbsDevModel.Store.CUSTTABLEs" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="DATAAREAs" EntityType="AXMbsDevModel.Store.DATAAREAs" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="MBSBDSALESREPTABLEs" EntityType="AXMbsDevModel.Store.MBSBDSALESREPTABLEs" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="MBSWBWEBUSERCONTACTs" EntityType="AXMbsDevModel.Store.MBSWBWEBUSERCONTACTs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CUSTTABLE" EntityType="AXMbsDevModel.Store.CUSTTABLE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DATAAREA" EntityType="AXMbsDevModel.Store.DATAAREA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MBSBDSALESREPTABLE" EntityType="AXMbsDevModel.Store.MBSBDSALESREPTABLE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MBSWBWEBUSERCONTACT" EntityType="AXMbsDevModel.Store.MBSWBWEBUSERCONTACT" store:Type="Tables" Schema="dbo" />
         </EntityContainer>
-        <EntityType Name="CUSTINVOICEJOURs">
+        <EntityType Name="CUSTINVOICEJOUR">
           <Key>
             <PropertyRef Name="DATAAREAID" />
             <PropertyRef Name="RECID" />
@@ -45,7 +45,7 @@
           <Property Name="DATAAREAID" Type="nvarchar" Nullable="false" MaxLength="4" />
           <Property Name="RECID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
         </EntityType>
-        <EntityType Name="CUSTTABLEs">
+        <EntityType Name="CUSTTABLE">
           <Key>
             <PropertyRef Name="ACCOUNTNUM" />
             <PropertyRef Name="DATAAREAID" />
@@ -62,7 +62,7 @@
           <Property Name="DATAAREAID" Type="nvarchar" Nullable="false" MaxLength="4" />
           <Property Name="RECID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
         </EntityType>
-        <EntityType Name="DATAAREAs">
+        <EntityType Name="DATAAREA">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
@@ -70,7 +70,7 @@
           <Property Name="NAME" Type="nvarchar" Nullable="false" MaxLength="40" />
           <Property Name="RECID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
         </EntityType>
-        <EntityType Name="MBSBDSALESREPTABLEs">
+        <EntityType Name="MBSBDSALESREPTABLE">
           <Key>
             <PropertyRef Name="SALESREPID" />
             <PropertyRef Name="DATAAREAID" />
@@ -80,7 +80,7 @@
           <Property Name="DATAAREAID" Type="nvarchar" Nullable="false" MaxLength="4" />
           <Property Name="RECID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
         </EntityType>
-        <EntityType Name="MBSWBWEBUSERCONTACTs">
+        <EntityType Name="MBSWBWEBUSERCONTACT">
           <Key>
             <PropertyRef Name="WEBLOGON" />
             <PropertyRef Name="CONTACTPERSONID" />
@@ -101,79 +101,79 @@
     <edmx:ConceptualModels>
       <Schema Namespace="AXMbsDevModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="AXMbsDevEntities" p1:LazyLoadingEnabled="true">
-          <EntitySet Name="CUSTINVOICEJOURs" EntityType="AXMbsDevModel.CUSTINVOICEJOUR" />
-          <EntitySet Name="CUSTINVOICETRANS" EntityType="AXMbsDevModel.CUSTINVOICETRAN" />
-          <EntitySet Name="CUSTTABLEs" EntityType="AXMbsDevModel.CUSTTABLE" />
-          <EntitySet Name="DATAAREAs" EntityType="AXMbsDevModel.DATAAREA" />
-          <EntitySet Name="MBSBDSALESREPTABLEs" EntityType="AXMbsDevModel.MBSBDSALESREPTABLE" />
-          <EntitySet Name="MBSWBWEBUSERCONTACTs" EntityType="AXMbsDevModel.MBSWBWEBUSERCONTACT" />
+          <EntitySet Name="CUSTINVOICEJOUR" EntityType="AXMbsDevModel.CUSTINVOICEJOUR" />
+          <EntitySet Name="CUSTINVOICETRANS" EntityType="AXMbsDevModel.CUSTINVOICETRANS" />
+          <EntitySet Name="CUSTTABLE" EntityType="AXMbsDevModel.CUSTTABLE" />
+          <EntitySet Name="DATAAREA" EntityType="AXMbsDevModel.DATAAREA" />
+          <EntitySet Name="MBSBDSALESREPTABLE" EntityType="AXMbsDevModel.MBSBDSALESREPTABLE" />
+          <EntitySet Name="MBSWBWEBUSERCONTACT" EntityType="AXMbsDevModel.MBSWBWEBUSERCONTACT" />
         </EntityContainer>
         <EntityType Name="CUSTINVOICEJOUR">
           <Key>
             <PropertyRef Name="DATAAREAID" />
             <PropertyRef Name="RECID" />
           </Key>
-          <Property Name="SALESID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="ORDERACCOUNT" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="INVOICEDATE" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="SALESBALANCE" Type="Decimal" Nullable="false" Precision="28" Scale="12" />
-          <Property Name="INVOICEAMOUNT" Type="Decimal" Nullable="false" Precision="28" Scale="12" />
-          <Property Name="INVOICEID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="SUMTAX" Type="Decimal" Nullable="false" Precision="28" Scale="12" />
-          <Property Name="MBSPRIMARYSALESREP" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
-          <Property Name="DATAAREAID" Type="String" Nullable="false" MaxLength="4" Unicode="true" FixedLength="false" />
-          <Property Name="RECID" Type="Int64" Nullable="false" />
+          <Property Type="String" Name="SALESID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ORDERACCOUNT" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="INVOICEDATE" Nullable="false" Precision="3" />
+          <Property Type="Decimal" Name="SALESBALANCE" Nullable="false" Precision="28" Scale="12" />
+          <Property Type="Decimal" Name="INVOICEAMOUNT" Nullable="false" Precision="28" Scale="12" />
+          <Property Type="String" Name="INVOICEID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="SUMTAX" Nullable="false" Precision="28" Scale="12" />
+          <Property Type="String" Name="MBSPRIMARYSALESREP" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DATAAREAID" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="RECID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
-        <EntityType Name="CUSTINVOICETRAN">
+        <EntityType Name="CUSTINVOICETRANS">
           <Key>
             <PropertyRef Name="DATAAREAID" />
             <PropertyRef Name="RECID" />
           </Key>
-          <Property Name="INVOICEID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="INVOICEDATE" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="INVENTTRANSID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="ITEMID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="NAME" Type="String" Nullable="false" MaxLength="1000" Unicode="true" FixedLength="false" />
-          <Property Name="QTY" Type="Decimal" Nullable="false" Precision="28" Scale="12" />
-          <Property Name="SALESPRICE" Type="Decimal" Nullable="false" Precision="28" Scale="12" />
-          <Property Name="LINEAMOUNT" Type="Decimal" Nullable="false" Precision="28" Scale="12" />
-          <Property Name="DATAAREAID" Type="String" Nullable="false" MaxLength="4" Unicode="true" FixedLength="false" />
-          <Property Name="RECID" Type="Int64" Nullable="false" />
+          <Property Type="String" Name="INVOICEID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="INVOICEDATE" Nullable="false" Precision="3" />
+          <Property Type="String" Name="INVENTTRANSID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ITEMID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NAME" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="QTY" Nullable="false" Precision="28" Scale="12" />
+          <Property Type="Decimal" Name="SALESPRICE" Nullable="false" Precision="28" Scale="12" />
+          <Property Type="Decimal" Name="LINEAMOUNT" Nullable="false" Precision="28" Scale="12" />
+          <Property Type="String" Name="DATAAREAID" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="RECID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="CUSTTABLE">
           <Key>
             <PropertyRef Name="ACCOUNTNUM" />
             <PropertyRef Name="DATAAREAID" />
           </Key>
-          <Property Name="ACCOUNTNUM" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="NAME" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
-          <Property Name="PHONE" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="ZIPCODE" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
-          <Property Name="STATE" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
-          <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="80" Unicode="true" FixedLength="false" />
-          <Property Name="CITY" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
-          <Property Name="STREET" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
-          <Property Name="MBSDEPARTMENTCODE" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="DATAAREAID" Type="String" Nullable="false" MaxLength="4" Unicode="true" FixedLength="false" />
-          <Property Name="RECID" Type="Int64" Nullable="false" />
+          <Property Type="String" Name="ACCOUNTNUM" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NAME" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PHONE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ZIPCODE" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="STATE" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EMAIL" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CITY" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="STREET" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MBSDEPARTMENTCODE" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DATAAREAID" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="RECID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="DATAAREA">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="String" Nullable="false" MaxLength="4" Unicode="true" FixedLength="false" />
-          <Property Name="NAME" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
-          <Property Name="RECID" Type="Int64" Nullable="false" />
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NAME" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="RECID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="MBSBDSALESREPTABLE">
           <Key>
             <PropertyRef Name="SALESREPID" />
             <PropertyRef Name="DATAAREAID" />
           </Key>
-          <Property Name="SALESREPID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
-          <Property Name="NAME" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
-          <Property Name="DATAAREAID" Type="String" Nullable="false" MaxLength="4" Unicode="true" FixedLength="false" />
-          <Property Name="RECID" Type="Int64" Nullable="false" />
+          <Property Type="String" Name="SALESREPID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NAME" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DATAAREAID" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="RECID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="MBSWBWEBUSERCONTACT">
           <Key>
@@ -181,106 +181,106 @@
             <PropertyRef Name="CONTACTPERSONID" />
             <PropertyRef Name="DATAAREAID" />
           </Key>
-          <Property Name="ACCOUNTNUM" Type="String" MaxLength="20" Unicode="true" FixedLength="false" Nullable="true" />
-          <Property Name="NAME" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
-          <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="80" Unicode="true" FixedLength="false" />
-          <Property Name="WEBLOGON" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="WEBPASSWORD" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="CONTACTPERSONID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="SALESREPID" Type="String" Nullable="true" MaxLength="10" Unicode="true" FixedLength="false" />
-          <Property Name="DATAAREAID" Type="String" Nullable="false" MaxLength="4" Unicode="true" FixedLength="false" />
-          <Property Name="RECID" Type="Int64" Nullable="false" />
+          <Property Type="String" Name="ACCOUNTNUM" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NAME" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EMAIL" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="WEBLOGON" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="WEBPASSWORD" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CONTACTPERSONID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SALESREPID" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DATAAREAID" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="RECID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="AXMbsDevModelStoreContainer" CdmEntityContainer="AXMbsDevEntities">
-    <EntitySetMapping Name="CUSTINVOICEJOURs">
-      <EntityTypeMapping TypeName="IsTypeOf(AXMbsDevModel.CUSTINVOICEJOUR)">
-        <MappingFragment StoreEntitySet="CUSTINVOICEJOURs">
-          <ScalarProperty Name="DATAAREAID" ColumnName="DATAAREAID" />
-          <ScalarProperty Name="RECID" ColumnName="RECID" />
-          <ScalarProperty Name="SALESID" ColumnName="SALESID" />
-          <ScalarProperty Name="ORDERACCOUNT" ColumnName="ORDERACCOUNT" />
-          <ScalarProperty Name="INVOICEDATE" ColumnName="INVOICEDATE" />
-          <ScalarProperty Name="SALESBALANCE" ColumnName="SALESBALANCE" />
-          <ScalarProperty Name="INVOICEAMOUNT" ColumnName="INVOICEAMOUNT" />
-          <ScalarProperty Name="INVOICEID" ColumnName="INVOICEID" />
-          <ScalarProperty Name="SUMTAX" ColumnName="SUMTAX" />
-          <ScalarProperty Name="MBSPRIMARYSALESREP" ColumnName="MBSPRIMARYSALESREP" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="CUSTINVOICETRANS">
-      <EntityTypeMapping TypeName="IsTypeOf(AXMbsDevModel.CUSTINVOICETRAN)">
-        <MappingFragment StoreEntitySet="CUSTINVOICETRANS">
-          <ScalarProperty Name="DATAAREAID" ColumnName="DATAAREAID" />
-          <ScalarProperty Name="RECID" ColumnName="RECID" />
-          <ScalarProperty Name="INVOICEID" ColumnName="INVOICEID" />
-          <ScalarProperty Name="INVOICEDATE" ColumnName="INVOICEDATE" />
-          <ScalarProperty Name="INVENTTRANSID" ColumnName="INVENTTRANSID" />
-          <ScalarProperty Name="ITEMID" ColumnName="ITEMID" />
-          <ScalarProperty Name="NAME" ColumnName="NAME" />
-          <ScalarProperty Name="QTY" ColumnName="QTY" />
-          <ScalarProperty Name="SALESPRICE" ColumnName="SALESPRICE" />
-          <ScalarProperty Name="LINEAMOUNT" ColumnName="LINEAMOUNT" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="CUSTTABLEs">
-      <EntityTypeMapping TypeName="IsTypeOf(AXMbsDevModel.CUSTTABLE)">
-        <MappingFragment StoreEntitySet="CUSTTABLEs">
-          <ScalarProperty Name="ACCOUNTNUM" ColumnName="ACCOUNTNUM" />
-          <ScalarProperty Name="DATAAREAID" ColumnName="DATAAREAID" />
-          <ScalarProperty Name="NAME" ColumnName="NAME" />
-          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
-          <ScalarProperty Name="ZIPCODE" ColumnName="ZIPCODE" />
-          <ScalarProperty Name="STATE" ColumnName="STATE" />
-          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
-          <ScalarProperty Name="CITY" ColumnName="CITY" />
-          <ScalarProperty Name="STREET" ColumnName="STREET" />
-          <ScalarProperty Name="MBSDEPARTMENTCODE" ColumnName="MBSDEPARTMENTCODE" />
-          <ScalarProperty Name="RECID" ColumnName="RECID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="DATAAREAs">
-      <EntityTypeMapping TypeName="IsTypeOf(AXMbsDevModel.DATAAREA)">
-        <MappingFragment StoreEntitySet="DATAAREAs">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="NAME" ColumnName="NAME" />
-          <ScalarProperty Name="RECID" ColumnName="RECID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="MBSBDSALESREPTABLEs">
-      <EntityTypeMapping TypeName="IsTypeOf(AXMbsDevModel.MBSBDSALESREPTABLE)">
-        <MappingFragment StoreEntitySet="MBSBDSALESREPTABLEs">
-          <ScalarProperty Name="SALESREPID" ColumnName="SALESREPID" />
-          <ScalarProperty Name="DATAAREAID" ColumnName="DATAAREAID" />
-          <ScalarProperty Name="NAME" ColumnName="NAME" />
-          <ScalarProperty Name="RECID" ColumnName="RECID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="MBSWBWEBUSERCONTACTs">
-      <EntityTypeMapping TypeName="IsTypeOf(AXMbsDevModel.MBSWBWEBUSERCONTACT)">
-        <MappingFragment StoreEntitySet="MBSWBWEBUSERCONTACTs">
-          <ScalarProperty Name="WEBLOGON" ColumnName="WEBLOGON" />
-          <ScalarProperty Name="CONTACTPERSONID" ColumnName="CONTACTPERSONID" />
-          <ScalarProperty Name="DATAAREAID" ColumnName="DATAAREAID" />
-          <ScalarProperty Name="ACCOUNTNUM" ColumnName="ACCOUNTNUM" />
-          <ScalarProperty Name="NAME" ColumnName="NAME" />
-          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
-          <ScalarProperty Name="WEBPASSWORD" ColumnName="WEBPASSWORD" />
-          <ScalarProperty Name="SALESREPID" ColumnName="SALESREPID" />
-          <ScalarProperty Name="RECID" ColumnName="RECID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-  </EntityContainerMapping>
+          <EntitySetMapping Name="CUSTINVOICEJOUR">
+            <EntityTypeMapping TypeName="AXMbsDevModel.CUSTINVOICEJOUR">
+              <MappingFragment StoreEntitySet="CUSTINVOICEJOUR">
+                <ScalarProperty Name="RECID" ColumnName="RECID" />
+                <ScalarProperty Name="DATAAREAID" ColumnName="DATAAREAID" />
+                <ScalarProperty Name="MBSPRIMARYSALESREP" ColumnName="MBSPRIMARYSALESREP" />
+                <ScalarProperty Name="SUMTAX" ColumnName="SUMTAX" />
+                <ScalarProperty Name="INVOICEID" ColumnName="INVOICEID" />
+                <ScalarProperty Name="INVOICEAMOUNT" ColumnName="INVOICEAMOUNT" />
+                <ScalarProperty Name="SALESBALANCE" ColumnName="SALESBALANCE" />
+                <ScalarProperty Name="INVOICEDATE" ColumnName="INVOICEDATE" />
+                <ScalarProperty Name="ORDERACCOUNT" ColumnName="ORDERACCOUNT" />
+                <ScalarProperty Name="SALESID" ColumnName="SALESID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CUSTINVOICETRANS">
+            <EntityTypeMapping TypeName="AXMbsDevModel.CUSTINVOICETRANS">
+              <MappingFragment StoreEntitySet="CUSTINVOICETRANS">
+                <ScalarProperty Name="RECID" ColumnName="RECID" />
+                <ScalarProperty Name="DATAAREAID" ColumnName="DATAAREAID" />
+                <ScalarProperty Name="LINEAMOUNT" ColumnName="LINEAMOUNT" />
+                <ScalarProperty Name="SALESPRICE" ColumnName="SALESPRICE" />
+                <ScalarProperty Name="QTY" ColumnName="QTY" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ITEMID" ColumnName="ITEMID" />
+                <ScalarProperty Name="INVENTTRANSID" ColumnName="INVENTTRANSID" />
+                <ScalarProperty Name="INVOICEDATE" ColumnName="INVOICEDATE" />
+                <ScalarProperty Name="INVOICEID" ColumnName="INVOICEID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CUSTTABLE">
+            <EntityTypeMapping TypeName="AXMbsDevModel.CUSTTABLE">
+              <MappingFragment StoreEntitySet="CUSTTABLE">
+                <ScalarProperty Name="RECID" ColumnName="RECID" />
+                <ScalarProperty Name="DATAAREAID" ColumnName="DATAAREAID" />
+                <ScalarProperty Name="MBSDEPARTMENTCODE" ColumnName="MBSDEPARTMENTCODE" />
+                <ScalarProperty Name="STREET" ColumnName="STREET" />
+                <ScalarProperty Name="CITY" ColumnName="CITY" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="ZIPCODE" ColumnName="ZIPCODE" />
+                <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ACCOUNTNUM" ColumnName="ACCOUNTNUM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DATAAREA">
+            <EntityTypeMapping TypeName="AXMbsDevModel.DATAAREA">
+              <MappingFragment StoreEntitySet="DATAAREA">
+                <ScalarProperty Name="RECID" ColumnName="RECID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MBSBDSALESREPTABLE">
+            <EntityTypeMapping TypeName="AXMbsDevModel.MBSBDSALESREPTABLE">
+              <MappingFragment StoreEntitySet="MBSBDSALESREPTABLE">
+                <ScalarProperty Name="RECID" ColumnName="RECID" />
+                <ScalarProperty Name="DATAAREAID" ColumnName="DATAAREAID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="SALESREPID" ColumnName="SALESREPID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MBSWBWEBUSERCONTACT">
+            <EntityTypeMapping TypeName="AXMbsDevModel.MBSWBWEBUSERCONTACT">
+              <MappingFragment StoreEntitySet="MBSWBWEBUSERCONTACT">
+                <ScalarProperty Name="RECID" ColumnName="RECID" />
+                <ScalarProperty Name="DATAAREAID" ColumnName="DATAAREAID" />
+                <ScalarProperty Name="SALESREPID" ColumnName="SALESREPID" />
+                <ScalarProperty Name="CONTACTPERSONID" ColumnName="CONTACTPERSONID" />
+                <ScalarProperty Name="WEBPASSWORD" ColumnName="WEBPASSWORD" />
+                <ScalarProperty Name="WEBLOGON" ColumnName="WEBLOGON" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ACCOUNTNUM" ColumnName="ACCOUNTNUM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
@@ -293,7 +293,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>

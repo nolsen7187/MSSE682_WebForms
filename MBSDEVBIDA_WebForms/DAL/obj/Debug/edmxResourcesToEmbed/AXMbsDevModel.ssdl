@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="AXMbsDevModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="AXMbsDevModelStoreContainer">
-    <EntitySet Name="CUSTINVOICEJOURs" EntityType="AXMbsDevModel.Store.CUSTINVOICEJOURs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CUSTINVOICEJOUR" EntityType="AXMbsDevModel.Store.CUSTINVOICEJOUR" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="CUSTINVOICETRANS" EntityType="AXMbsDevModel.Store.CUSTINVOICETRANS" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="CUSTTABLEs" EntityType="AXMbsDevModel.Store.CUSTTABLEs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="DATAAREAs" EntityType="AXMbsDevModel.Store.DATAAREAs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="MBSBDSALESREPTABLEs" EntityType="AXMbsDevModel.Store.MBSBDSALESREPTABLEs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="MBSWBWEBUSERCONTACTs" EntityType="AXMbsDevModel.Store.MBSWBWEBUSERCONTACTs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CUSTTABLE" EntityType="AXMbsDevModel.Store.CUSTTABLE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DATAAREA" EntityType="AXMbsDevModel.Store.DATAAREA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MBSBDSALESREPTABLE" EntityType="AXMbsDevModel.Store.MBSBDSALESREPTABLE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MBSWBWEBUSERCONTACT" EntityType="AXMbsDevModel.Store.MBSWBWEBUSERCONTACT" store:Type="Tables" Schema="dbo" />
   </EntityContainer>
-  <EntityType Name="CUSTINVOICEJOURs">
+  <EntityType Name="CUSTINVOICEJOUR">
     <Key>
       <PropertyRef Name="DATAAREAID" />
       <PropertyRef Name="RECID" />
@@ -40,7 +40,7 @@
     <Property Name="DATAAREAID" Type="nvarchar" Nullable="false" MaxLength="4" />
     <Property Name="RECID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
-  <EntityType Name="CUSTTABLEs">
+  <EntityType Name="CUSTTABLE">
     <Key>
       <PropertyRef Name="ACCOUNTNUM" />
       <PropertyRef Name="DATAAREAID" />
@@ -57,7 +57,7 @@
     <Property Name="DATAAREAID" Type="nvarchar" Nullable="false" MaxLength="4" />
     <Property Name="RECID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
-  <EntityType Name="DATAAREAs">
+  <EntityType Name="DATAAREA">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
@@ -65,7 +65,7 @@
     <Property Name="NAME" Type="nvarchar" Nullable="false" MaxLength="40" />
     <Property Name="RECID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
-  <EntityType Name="MBSBDSALESREPTABLEs">
+  <EntityType Name="MBSBDSALESREPTABLE">
     <Key>
       <PropertyRef Name="SALESREPID" />
       <PropertyRef Name="DATAAREAID" />
@@ -75,7 +75,7 @@
     <Property Name="DATAAREAID" Type="nvarchar" Nullable="false" MaxLength="4" />
     <Property Name="RECID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
-  <EntityType Name="MBSWBWEBUSERCONTACTs">
+  <EntityType Name="MBSWBWEBUSERCONTACT">
     <Key>
       <PropertyRef Name="WEBLOGON" />
       <PropertyRef Name="CONTACTPERSONID" />

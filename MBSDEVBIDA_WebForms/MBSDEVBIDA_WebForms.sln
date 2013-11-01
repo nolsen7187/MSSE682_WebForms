@@ -28,6 +28,10 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PresentationLayer", "http:/
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVC", "SVC\SVC.csproj", "{9401591C-122B-4E8E-A8A3-82ED52002F2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{3A161C36-87A9-4009-B993-EBCE4AFCABA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +50,14 @@ Global
 		{A7F0C2E6-3A34-49DC-B26C-E28146C27DFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7F0C2E6-3A34-49DC-B26C-E28146C27DFE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{A7F0C2E6-3A34-49DC-B26C-E28146C27DFE}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{9401591C-122B-4E8E-A8A3-82ED52002F2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9401591C-122B-4E8E-A8A3-82ED52002F2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9401591C-122B-4E8E-A8A3-82ED52002F2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9401591C-122B-4E8E-A8A3-82ED52002F2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A161C36-87A9-4009-B993-EBCE4AFCABA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A161C36-87A9-4009-B993-EBCE4AFCABA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A161C36-87A9-4009-B993-EBCE4AFCABA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A161C36-87A9-4009-B993-EBCE4AFCABA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

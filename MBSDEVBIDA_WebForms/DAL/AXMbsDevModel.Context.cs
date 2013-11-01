@@ -25,11 +25,11 @@ namespace DAL
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<CUSTINVOICEJOUR> CUSTINVOICEJOURs { get; set; }
-        public DbSet<CUSTINVOICETRAN> CUSTINVOICETRANS { get; set; }
-        public DbSet<CUSTTABLE> CUSTTABLEs { get; set; }
-        public DbSet<DATAAREA> DATAAREAs { get; set; }
-        public DbSet<MBSBDSALESREPTABLE> MBSBDSALESREPTABLEs { get; set; }
-        public DbSet<MBSWBWEBUSERCONTACT> MBSWBWEBUSERCONTACTs { get; set; }
+        public DbSet<CUSTINVOICEJOUR> CUSTINVOICEJOUR { get; set; }
+        public DbSet<CUSTINVOICETRANS> CUSTINVOICETRANS { get; set; }
+        public DbSet<CUSTTABLE> CUSTTABLE { get; set; }
+        public DbSet<DATAAREA> DATAAREA { get; set; }
+        public DbSet<MBSBDSALESREPTABLE> MBSBDSALESREPTABLE { get; set; }
+        public DbSet<MBSWBWEBUSERCONTACT> MBSWBWEBUSERCONTACT { get; set; }
     }
 }

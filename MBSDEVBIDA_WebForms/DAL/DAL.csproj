@@ -66,11 +66,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AXMbsDevModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="DataInitializer.cs" />
-    <Compile Include="CUSTINVOICEJOUR.cs">
+    <Compile Include="CUSTINVOICETRANS.cs">
       <DependentUpon>AXMbsDevModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CUSTINVOICETRAN.cs">
+    <Compile Include="DataInitializer.cs" />
+    <Compile Include="CUSTINVOICEJOUR.cs">
       <DependentUpon>AXMbsDevModel.tt</DependentUpon>
     </Compile>
     <Compile Include="CUSTTABLE.cs">
