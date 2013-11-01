@@ -36,7 +36,7 @@ namespace DALTest
             var DARepo = new DataRepository<DATAAREA>();
             DATAAREA DA = new DATAAREA();
             DA.ID = "aR";
-            DA.NAME = "Sucks Balls";
+            DA.NAME = "Sucks";
             DARepo.Create(DA);
         }
         [TestMethod]
