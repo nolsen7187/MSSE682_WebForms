@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL;
 using System.Data.Entity;
+
 namespace SVC
 {
     public abstract class SVC_RepositoryConcreteClass
