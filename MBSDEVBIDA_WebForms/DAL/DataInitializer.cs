@@ -10,196 +10,251 @@ namespace DAL
         protected override void Seed(AXMbsDevEntities context)
         {
             GetWebUsers().ForEach(m => context.MBSWBWEBUSERCONTACT.Add(m));
-            //GetCustomers().ForEach(c => context.Customers.Add(c));
-            /*GetEmployees().ForEach(e => context.Employees.Add(e));
-            GetItems().ForEach(i => context.Items.Add(i));
-            GetItemCategories().ForEach(ic => context.ItemCategories.Add(ic));
-            GetSalesHeader().ForEach(sh => context.SalesHeaders.Add(sh));
-            GetSalesItems().ForEach(si => context.SalesItems.Add(si));
-            GetWebUsers().ForEach(w => context.WebUserTables.Add(w));*/
-
+            GetSalesReps().ForEach(s => context.MBSBDSALESREPTABLE.Add(s));
+            GetCompanies().ForEach(c => context.DATAAREA.Add(c));
+            GetInvoices().ForEach(i => context.CUSTINVOICEJOUR.Add(i));
+            GetInvoiceLines().ForEach(il => context.CUSTINVOICETRANS.Add(il));
+            GetCustomers().ForEach(ct => context.CUSTTABLE.Add(ct));
         }
-        /*private static List<Customer> GetCustomers()
+        private static List<CUSTTABLE> GetCustomers()
         {
-            var customers = new List<Customer> {
-                new Customer
+            var customers = new List<CUSTTABLE> {
+                new CUSTTABLE
                 {
-                    CustomerId = 25,
-                    FirstName = "Master",
-                    LastName = "Yoda",
-                    City = "Hoth",
-                    State = "CO",
-                    Zip = "80012",
-                    Street = "1234 Wookie Way",
-                    Address = "1234 Wookie Way, Hoth CO 80012",
-                    Phone = "3031234567",
-                    Email = "Masteryoda@jedi.com"
+                    ACCOUNTNUM = "100000",
+                    NAME = "Master Yoda",                    
+                    CITY = "Hoth",
+                    STATE = "CO",
+                    ZIPCODE = "80012",
+                    STREET = "1234 Wookie Way",
+                    MBSDEPARTMENTCODE = "Accounts Receivable",
+                    PHONE = "3031234567",
+                    EMAIL = "Masteryoda@jedi.com",
+                    DATAAREAID = "MBS"
                 },
-                new Customer
+                new CUSTTABLE
                 {
-                    CustomerId = 26,
-                    FirstName = "Master",
-                    LastName = "ObiWan",
-                    City = "Hoth",
-                    State = "CO",
-                    Zip = "80012",
-                    Street = "1234 Wookie Way",
-                    Address = "1234 Wookie Way, Hoth CO 80012",
-                    Phone = "3031234567",
-                    Email = "Masteryoda@jedi.com"
+                    ACCOUNTNUM = "100001",
+                    NAME = "Nick Olsen",                    
+                    CITY = "Parker",
+                    STATE = "CO",
+                    ZIPCODE = "80135",
+                    STREET = "11321 Lowage Way",
+                    MBSDEPARTMENTCODE = "Warehouse",
+                    PHONE = "3038765432",
+                    EMAIL = "nickolsen@hotmail.com",
+                    DATAAREAID = "MBS"
+                },
+                new CUSTTABLE
+                {
+                    ACCOUNTNUM = "100003",
+                    NAME = "Scott VandenElzen",                    
+                    CITY = "Denver",
+                    STATE = "CO",
+                    ZIPCODE = "80011",
+                    STREET = "123 Regis Way",
+                    MBSDEPARTMENTCODE = "Academia",
+                    PHONE = "3033124567",
+                    EMAIL = "scottvandenelzen@hotmail.com",
+                    DATAAREAID = "COP"
+                },
+                new CUSTTABLE
+                {
+                    ACCOUNTNUM = "100004",
+                    NAME = "Sidney Crosby",                    
+                    CITY = "Pittsburgh",
+                    STATE = "PA",
+                    ZIPCODE = "60001",
+                    STREET = "9891 S. University St.",
+                    MBSDEPARTMENTCODE = "Hockey",
+                    PHONE = "7174328543",
+                    EMAIL = "sidneycrosby@hotmail.com",
+                    DATAAREAID = "COP"
                 }
                 
             };
 
             return customers;
         }
-        private static List<Employee> GetEmployees()
+        private static List<MBSBDSALESREPTABLE> GetSalesReps()
         {
-            var employees = new List<Employee> {
-                new Employee
+            var salesReps = new List<MBSBDSALESREPTABLE> {
+                new MBSBDSALESREPTABLE
                 {
-                    EmployeeId = 25,
-                    EmployeeFirstName = "Bruce",
-                    EmployeeLastName = "Olsen",
-                    EmployeePhone = "3031234567",
-                    Employeetype = "Worker"
+                    SALESREPID = "1",
+                    NAME = "Joe Cheeseball",
+                    DATAAREAID = "MBS"
                 },
-                new Employee
+                new MBSBDSALESREPTABLE
                 {
-                    EmployeeId = 26,
-                    EmployeeFirstName = "Maurice",
-                    EmployeeLastName = "Olsen",
-                    EmployeePhone = "3031234567",
-                    Employeetype = "Manager"
+                    SALESREPID = "2",
+                    NAME = "Chris Jones",
+                    DATAAREAID = "COP"
                 }
                 
             };
 
-            return employees;
+            return salesReps;
         }
-        private static List<ItemCategory> GetItemCategories()
+        private static List<DATAAREA> GetCompanies()
         {
-            var itemCategoies = new List<ItemCategory> {
-                new ItemCategory
+            var dataAreas = new List<DATAAREA> {
+                new DATAAREA
                 {
-                ItemCategoryId = 21,
-                Category = "Engine",
-                Description = "Engine Performance Modification"
+                ID = "MBS",
+                NAME = "MBS Dev, INC.",
                 },
-                new ItemCategory
+                new DATAAREA
                 {
-                ItemCategoryId = 22,
-                Category = "Exhaust",
-                Description = "Exhaust Performance Modification"
-                },
-                new ItemCategory
-                {
-                ItemCategoryId = 23,
-                Category = "Suspension",
-                Description = "Suspension Performance Modification"
-                }                
+                ID = "COP",
+                NAME = "C Office Products",
+                }          
             };
 
-            return itemCategoies;
+            return dataAreas;
         }
-        private static List<Item> GetItems()
+        private static List<CUSTINVOICEJOUR> GetInvoices()
         {
 
 
-            var items = new List<Item> {
-                new Item
+            var invoices = new List<CUSTINVOICEJOUR> {
+                new CUSTINVOICEJOUR
                 {
-                    ItemId = 21,
-                    ItemName = "FP Green",
-                    Price = 900,
-                    QuantityAvailable = 10,
-                    ItemCategoryId =  21
+                    SALESID = "1",
+                    ORDERACCOUNT = "100000",
+                    INVOICEDATE = new System.DateTime(2013, 11, 10),
+                    SALESBALANCE = 100,
+                    INVOICEAMOUNT =  110,
+                    INVOICEID = "1",
+                    SUMTAX = 10,
+                    MBSPRIMARYSALESREP = "1",
+                    DATAAREAID = "MBS"
                 },
-                new Item
+                new CUSTINVOICEJOUR
                 {
-                    ItemId = 22,
-                    ItemName = "FP Red",
-                    Price = 1200,
-                    QuantityAvailable = 10,
-                    ItemCategoryId =  21
+                    SALESID = "1",
+                    ORDERACCOUNT = "100000",
+                    INVOICEDATE = new System.DateTime(2013, 11, 11),
+                    SALESBALANCE = 100,
+                    INVOICEAMOUNT =  110,
+                    INVOICEID = "2",
+                    SUMTAX = 10,
+                    MBSPRIMARYSALESREP = "1",
+                    DATAAREAID = "MBS"
                 },
-                new Item
+                new CUSTINVOICEJOUR
                 {
-                    ItemId = 23,
-                    ItemName = "Borla Catback Exhaust",
-                    Price = 500,
-                    QuantityAvailable = 10,
-                    ItemCategoryId =  22
+                    SALESID = "2",
+                    ORDERACCOUNT = "100001",
+                    INVOICEDATE = new System.DateTime(2013, 10, 10),
+                    SALESBALANCE = 100,
+                    INVOICEAMOUNT =  110,
+                    INVOICEID = "3",
+                    SUMTAX = 10,
+                    MBSPRIMARYSALESREP = "1",
+                    DATAAREAID = "MBS"
+                },    
+                new CUSTINVOICEJOUR
+                {
+                    SALESID = "3",
+                    ORDERACCOUNT = "100001",
+                    INVOICEDATE = new System.DateTime(2013, 9, 10),
+                    SALESBALANCE = 100,
+                    INVOICEAMOUNT =  110,
+                    INVOICEID = "4",
+                    SUMTAX = 10,
+                    MBSPRIMARYSALESREP = "2",
+                    DATAAREAID = "COP"
                 },      
-                new Item
+                new CUSTINVOICEJOUR
                 {
-                    ItemId = 24,
-                    ItemName = "Magnaflow Catback Exhaust",
-                    Price = 600,
-                    QuantityAvailable = 10,
-                    ItemCategoryId =  22
-                },       
-                new Item
-                {
-                    ItemId = 25,
-                    ItemName = "UR Front Sway Bar",
-                    Price = 200,
-                    QuantityAvailable = 10,
-                    ItemCategoryId =  23
-                },      
-                new Item
-                {
-                    ItemId = 26,
-                    ItemName = "UR Rear Sway Bar",
-                    Price = 200,
-                    QuantityAvailable = 10,
-                    ItemCategoryId =  23
-                },          
+                    SALESID = "4",
+                    ORDERACCOUNT = "100003",
+                    INVOICEDATE = new System.DateTime(2013, 8, 7),
+                    SALESBALANCE = 1000,
+                    INVOICEAMOUNT =  1100,
+                    INVOICEID = "5",
+                    SUMTAX = 100,
+                    MBSPRIMARYSALESREP = "2",
+                    DATAAREAID = "COP"
+                }   
             };
 
-            return items;
+            return invoices;
         }
-        private static List<SalesHeader> GetSalesHeader()
+        private static List<CUSTINVOICETRANS> GetInvoiceLines()
         {
-            var salesHeaders = new List<SalesHeader> {
-                new SalesHeader
+            var invoiceLines = new List<CUSTINVOICETRANS> {
+                new CUSTINVOICETRANS
                 {
-                    SalesId = 21,
-                    CustomerId = 25,
-                    OrderSalesBalance = 1400,
-                    OrderTaxAmount = 100,
-                    OrderTotal = 1500
+                    INVOICEID = "1",
+                    INVOICEDATE = new System.DateTime(2013, 11, 10),
+                    ITEMID = "1",
+                    NAME = "Paper Ream",
+                    QTY = 2,
+                    SALESPRICE = 25,
+                    LINEAMOUNT = 50,
+                    DATAAREAID = "MBS"
                 },
-                
+                new CUSTINVOICETRANS
+                {
+                    INVOICEID = "1",
+                    INVOICEDATE = new System.DateTime(2013, 11, 10),
+                    ITEMID = "2",
+                    NAME = "Staples",
+                    QTY = 1,
+                    SALESPRICE = 50,
+                    LINEAMOUNT = 50,
+                    DATAAREAID = "MBS"
+                },
+                new CUSTINVOICETRANS
+                {
+                    INVOICEID = "2",
+                    INVOICEDATE = new System.DateTime(2013, 11, 11),
+                    ITEMID = "3",
+                    NAME = "Paper Clips",
+                    QTY = 1,
+                    SALESPRICE = 100,
+                    LINEAMOUNT = 100,
+                    DATAAREAID = "MBS"
+                },
+                new CUSTINVOICETRANS
+                {
+                    INVOICEID = "3",
+                    INVOICEDATE = new System.DateTime(2013, 10, 10),
+                    ITEMID = "4",
+                    NAME = "Office Chair",
+                    QTY = 1,
+                    SALESPRICE = 100,
+                    LINEAMOUNT = 100,
+                    DATAAREAID = "MBS"
+                },
+                new CUSTINVOICETRANS
+                {
+                    INVOICEID = "4",
+                    INVOICEDATE = new System.DateTime(2013, 9, 10),
+                    ITEMID = "4",
+                    NAME = "Office Chair",
+                    QTY = 1,
+                    SALESPRICE = 100,
+                    LINEAMOUNT = 100,
+                    DATAAREAID = "COP"
+                },
+                new CUSTINVOICETRANS
+                {
+                    INVOICEID = "5",
+                    INVOICEDATE = new System.DateTime(2013, 11, 10),
+                    ITEMID = "4",
+                    NAME = "Office Chair",
+                    QTY = 10,
+                    SALESPRICE = 100,
+                    LINEAMOUNT = 1000,
+                    DATAAREAID = "COP"
+                }              
             };
 
-            return salesHeaders;
+            return invoiceLines;
         }
-        private static List<SalesItem> GetSalesItems()
-        {
-            var salesItems = new List<SalesItem> {
-                new SalesItem
-                {
-                    SalesItemTransId = 21,
-                    SalesId = 21,
-                    ItemId = 22,
-                    Qty = 1,
-                    Price = 1200
-                   
-                },
-                new SalesItem
-                {
-                    SalesItemTransId = 22,
-                    SalesId = 21,
-                    ItemId = 26,
-                    Qty = 1,
-                    Price = 200
-                }
-                
-            };
-
-            return salesItems;
-        }*/
         private static List<MBSWBWEBUSERCONTACT> GetWebUsers()
         {
             var webUsers = new List<MBSWBWEBUSERCONTACT> {
@@ -217,10 +272,8 @@ namespace DAL
                     WEBLOGON = "username",
                     WEBPASSWORD = "Pass@word1",
                     DATAAREAID = "MBS"
-                }
-                
+                }              
             };
-
             return webUsers;
         }
     }
