@@ -3,44 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{CB5DBA12-278D-4551-BCE5-F5D1B6B8BAF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DALTest", "DALTest\DALTest.csproj", "{D99CA528-9406-4B32-B21B-A87FB6E7FEB6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVC", "SVC\SVC.csproj", "{9401591C-122B-4E8E-A8A3-82ED52002F2F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{3A161C36-87A9-4009-B993-EBCE4AFCABA7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUSTest", "BUSTest\BUSTest.csproj", "{E7DD22BF-E1A3-4834-9B09-48F0C685C725}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVCTest", "SVCTest\SVCTest.csproj", "{8DFE4CFA-E48F-41CD-94C1-4E1BF5F1EA5B}"
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PRS", "http://localhost:51885", "{D12FE6B8-8680-4DE1-B2FE-094650EC23FE}"
-	ProjectSection(WebsiteProperties) = preProject
-		UseIISExpress = "true"
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
-		ProjectReferences = "{cb5dba12-278d-4551-bce5-f5d1b6b8baf8}|DAL.dll;{3a161c36-87a9-4009-b993-ebce4afcaba7}|BUS.dll;{9401591C-122B-4E8E-A8A3-82ED52002F2F}|SVC.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_51885"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\Documents\Visual Studio 2012\WebSites\PRS\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51885\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_51885"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\Documents\Visual Studio 2012\WebSites\PRS\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51885\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "..\..\..\..\Documents\Visual Studio 2012\WebSites\PRS\"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{115B4B5A-BEFB-4B97-A8C1-054878A070AF}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PRS", "PRS\", "{157E7B40-6564-431F-B71D-1062FF50016A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/PRS"
+		Debug.AspNetCompiler.PhysicalPath = "PRS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\PRS\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/PRS"
+		Release.AspNetCompiler.PhysicalPath = "PRS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\PRS\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53266"
 	EndProjectSection
 EndProject
 Global
@@ -53,30 +40,10 @@ Global
 		{CB5DBA12-278D-4551-BCE5-F5D1B6B8BAF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB5DBA12-278D-4551-BCE5-F5D1B6B8BAF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB5DBA12-278D-4551-BCE5-F5D1B6B8BAF8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D99CA528-9406-4B32-B21B-A87FB6E7FEB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D99CA528-9406-4B32-B21B-A87FB6E7FEB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D99CA528-9406-4B32-B21B-A87FB6E7FEB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D99CA528-9406-4B32-B21B-A87FB6E7FEB6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9401591C-122B-4E8E-A8A3-82ED52002F2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9401591C-122B-4E8E-A8A3-82ED52002F2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9401591C-122B-4E8E-A8A3-82ED52002F2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9401591C-122B-4E8E-A8A3-82ED52002F2F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3A161C36-87A9-4009-B993-EBCE4AFCABA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A161C36-87A9-4009-B993-EBCE4AFCABA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A161C36-87A9-4009-B993-EBCE4AFCABA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A161C36-87A9-4009-B993-EBCE4AFCABA7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E7DD22BF-E1A3-4834-9B09-48F0C685C725}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E7DD22BF-E1A3-4834-9B09-48F0C685C725}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E7DD22BF-E1A3-4834-9B09-48F0C685C725}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E7DD22BF-E1A3-4834-9B09-48F0C685C725}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8DFE4CFA-E48F-41CD-94C1-4E1BF5F1EA5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8DFE4CFA-E48F-41CD-94C1-4E1BF5F1EA5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8DFE4CFA-E48F-41CD-94C1-4E1BF5F1EA5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8DFE4CFA-E48F-41CD-94C1-4E1BF5F1EA5B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D12FE6B8-8680-4DE1-B2FE-094650EC23FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D12FE6B8-8680-4DE1-B2FE-094650EC23FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D12FE6B8-8680-4DE1-B2FE-094650EC23FE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{D12FE6B8-8680-4DE1-B2FE-094650EC23FE}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{157E7B40-6564-431F-B71D-1062FF50016A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{157E7B40-6564-431F-B71D-1062FF50016A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{157E7B40-6564-431F-B71D-1062FF50016A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{157E7B40-6564-431F-B71D-1062FF50016A}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
